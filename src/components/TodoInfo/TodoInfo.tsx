@@ -1,7 +1,12 @@
 import { UserInfo } from '../UserInfo';
 import './TodoInfo.scss';
+import { TodoWithUser } from '../../entities/TodoWithUser';
 
-export const TodoInfo = ({ todo }) => (
+interface Props {
+  todo: TodoWithUser;
+}
+
+export const TodoInfo = ({ todo }: Props) => (
   <article
     className={`TodoInfo${todo.completed ? ' TodoInfo--completed' : ''} `}
     data-id={todo.id}

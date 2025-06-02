@@ -11,11 +11,7 @@ import { TodoWithUser } from './entities/TodoWithUser';
 import { getUserById } from './services/getUserById';
 import { getTodoID } from './services/getTodoId';
 
-type Props = {
-  onSubmit: (todo: TodoWithUser) => void;
-};
-
-export const App: React.FC<Props> = () => {
+export const App: React.FC = () => {
   const [title, setTitle] = useState('');
   const [userId, setUserId] = useState(0);
 
